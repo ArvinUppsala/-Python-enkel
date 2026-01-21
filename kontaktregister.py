@@ -101,6 +101,7 @@ while True:
     print("[3] Lägg till")
     print("[4] Ta bort")
     print("[5] Avsluta")
+    Print("[6] Robin fyller åt")
     
     val = input("\nVälj (1-5): ")
     
@@ -116,5 +117,8 @@ while True:
     elif val == "5":
         print("Hejdå!")
         break  # Avbryter while-loopen
+    elif val =="6":
+        print("Arvin gillar den nya noccon")
+
     else:
         print("Ogiltigt val, försök igen.")
