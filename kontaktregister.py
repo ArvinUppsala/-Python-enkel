@@ -67,6 +67,20 @@ def redigera_kontakt(kontakter):
     else:
         print(f"'{namn}' finns inte.")
 
+    def sok_kontakter(kontakter):
+        sokterm = input("Sök: ").lower()
+    
+    hittade = []
+    for namn in kontakter:
+        if sokterm in namn.lower():
+            hittade.append(namn)
+    
+    if hittade:
+        print(f"\nHittade {len(hittade)} kontakt(er):")
+        for namn in hittade:
+            print(f"  - {namn}: {kontakter[namn]['telefon']}")
+    else:
+        print("Inga kontakter matchade sökningen.")
 # ===================================================
 # Huvudprogram med meny
 # ===================================================
