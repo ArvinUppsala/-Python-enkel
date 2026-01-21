@@ -48,6 +48,25 @@ def ta_bort_kontakt(kontakter):
         print(f"'{namn}' finns inte.")
 
 
+def redigera_kontakt(kontakter):
+    namn = input("Vem vill du redigera? ")
+    
+    if namn in kontakter:
+        print(f"Nuvarande telefon: {kontakter[namn]['telefon']}")
+        print(f"Nuvarande email: {kontakter[namn]['email']}")
+        
+        telefon = input("Ny telefon (tryck Enter för att behålla): ")
+        email = input("Ny email (tryck Enter för att behålla): ")
+        
+        if telefon:
+            kontakter[namn]['telefon'] = telefon
+        if email:
+            kontakter[namn]['email'] = email
+        
+        print(f"'{namn}' uppdaterad!")
+    else:
+        print(f"'{namn}' finns inte.")
+
 # ===================================================
 # Huvudprogram med meny
 # ===================================================
